@@ -15,6 +15,16 @@ And build project.
 ohrs build --arch aarch
 ```
 
+### For Mac
+
+Make sure that your `ar` support `@response file`. See detail in [here](https://github.com/ninja-build/ninja/issues/2111#issuecomment-1931837345)
+
+You can rewrite ar with llvm-ar
+
+```bash
+sudo ln -sf $OHOS_NDK_HOME/native/llvm/bin/llvm-ar /usr/local/bin/ar
+```
+
 ## Run
 
 Add the following code to your ArkTS file.
